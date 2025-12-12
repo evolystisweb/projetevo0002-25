@@ -6,7 +6,17 @@ import { Menu, X, Settings, Home, BookOpen, Briefcase, Package, Newspaper, Phone
 import FormationsSection from './components/FormationsSection';
 import ServicesEtProduitsSection from './components/ServicesEtProduitsSection';
 import ActualitesRessourcesSection from './components/ActualitesRessourcesSection';
-import AdminPanelSimple from './components/AdminPanelSimple';
+
+// Admin Pages
+import LoginPage from './pages/admin/LoginPage';
+import DashboardPage from './pages/admin/DashboardPage';
+import FormationsManager from './pages/admin/FormationsManager';
+import ContactsManager from './pages/admin/ContactsManager';
+import SettingsManager from './pages/admin/SettingsManager';
+
+// Context
+import { AuthProvider } from './contexts/AuthContext';
+import { supabase } from './lib/supabase';
 
 // Custom CSS for additional animations and effects
 import './App.css';
@@ -244,12 +254,50 @@ const ContactPage = () => {
     company: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
+  const [contactInfo, setContactInfo] = useState(null);
 
-  const handleSubmit = (e) => {
+  useEffect(() => {
+    loadContactInfo();
+  }, []);
+
+  const loadContactInfo = async () => {
+    const { data } = await supabase
+      .from('site_settings')
+      .select('*')
+      .eq('key', 'company_info')
+      .maybeSingle();
+
+    if (data) {
+      setContactInfo(data.value);
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission
-    alert('Message envoyé avec succès ! Nous vous recontacterons bientôt.');
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setLoading(true);
+
+    try {
+      const { error } = await supabase
+        .from('contact_requests')
+        .insert([{
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          status: 'new'
+        }]);
+
+      if (error) throw error;
+
+      alert('Message envoyé avec succès ! Nous vous recontacterons bientôt.');
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error) {
+      alert('Erreur lors de l\'envoi du message. Veuillez réessayer.');
+      console.error(error);
+    } finally {
+      setLoading(false);
+    }
   };
 
   const handleChange = (e) => {
@@ -324,9 +372,10 @@ const ContactPage = () => {
                 </div>
                 <button
                   type="submit"
-                  className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300"
+                  disabled={loading}
+                  className="w-full bg-primary-600 hover:bg-primary-700 text-white py-3 rounded-lg font-semibold transition-colors duration-300 disabled:opacity-50"
                 >
-                  Envoyer le message
+                  {loading ? 'Envoi en cours...' : 'Envoyer le message'}
                 </button>
               </form>
             </div>
@@ -338,19 +387,19 @@ const ContactPage = () => {
                 <div className="space-y-4">
                   <div>
                     <p className="text-gray-500 font-medium">Adresse</p>
-                    <p className="text-gray-900">123 Avenue des Champs-Élysées<br />75008 Paris, France</p>
+                    <p className="text-gray-900">{contactInfo?.address || '123 Avenue des Champs-Élysées, 75008 Paris'}</p>
                   </div>
                   <div>
                     <p className="text-gray-500 font-medium">Téléphone</p>
-                    <p className="text-gray-900">+33 1 45 67 89 00</p>
+                    <p className="text-gray-900">{contactInfo?.phone || '+33 1 45 67 89 00'}</p>
                   </div>
                   <div>
                     <p className="text-gray-500 font-medium">Email</p>
-                    <p className="text-gray-900">contact@evolystis.fr</p>
+                    <p className="text-gray-900">{contactInfo?.email || 'contact@evolystis.fr'}</p>
                   </div>
                   <div>
                     <p className="text-gray-500 font-medium">Horaires</p>
-                    <p className="text-gray-900">Lundi - Vendredi : 9h00 - 18h00</p>
+                    <p className="text-gray-900">{contactInfo?.hours || 'Lundi - Vendredi : 9h00 - 18h00'}</p>
                   </div>
                 </div>
               </div>
@@ -456,22 +505,34 @@ const Footer = () => {
 function App() {
   return (
     <Router>
-      <div className="App">
-        <Navigation />
-        
-        <main>
+      <AuthProvider>
+        <div className="App">
           <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/formations" element={<FormationsSection />} />
-            <Route path="/services-produits" element={<ServicesEtProduitsSection />} />
-            <Route path="/actualites" element={<ActualitesRessourcesSection />} />
-            <Route path="/contact" element={<ContactPage />} />
-            <Route path="/admin" element={<AdminPanelSimple />} />
-          </Routes>
-        </main>
+            <Route path="/admin/login" element={<LoginPage />} />
+            <Route path="/admin/dashboard" element={<DashboardPage />} />
+            <Route path="/admin/formations" element={<FormationsManager />} />
+            <Route path="/admin/contacts" element={<ContactsManager />} />
+            <Route path="/admin/settings" element={<SettingsManager />} />
+            <Route path="/admin" element={<LoginPage />} />
 
-        <Footer />
-      </div>
+            <Route path="/*" element={
+              <>
+                <Navigation />
+                <main>
+                  <Routes>
+                    <Route path="/" element={<HomePage />} />
+                    <Route path="/formations" element={<FormationsSection />} />
+                    <Route path="/services-produits" element={<ServicesEtProduitsSection />} />
+                    <Route path="/actualites" element={<ActualitesRessourcesSection />} />
+                    <Route path="/contact" element={<ContactPage />} />
+                  </Routes>
+                </main>
+                <Footer />
+              </>
+            } />
+          </Routes>
+        </div>
+      </AuthProvider>
     </Router>
   );
 }
