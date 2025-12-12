@@ -1,0 +1,404 @@
+{
+  "formations": [
+    {
+      "id": 1,
+      "title": "Transformation Digitale pour les PME",
+      "description": "Formation complète pour comprendre et implémenter la transformation digitale dans votre entreprise. Approche pratique avec cas d'usage concrets.",
+      "duration": "3 jours",
+      "price": "1 200€",
+      "level": "Débutant",
+      "category": "Transformation Digitale",
+      "date": "2025-01-15",
+      "location": "Paris",
+      "modalities": ["Présentiel", "À distance"],
+      "objectives": [
+        "Comprendre les enjeux de la transformation digitale",
+        "Identifier les opportunités d'amélioration",
+        "Élaborer une stratégie digitale adaptée à votre entreprise"
+      ],
+      "program": [
+        {
+          "module": "Module 1 : Les bases de la transformation digitale",
+          "duration": "4h",
+          "content": "Écosystème digital, tendances actuelles, outils fondamentaux"
+        },
+        {
+          "module": "Module 2 : Diagnostic digital de l'entreprise",
+          "duration": "3h",
+          "content": "Audit des processus, identification des points d'amélioration"
+        },
+        {
+          "module": "Module 3 : Mise en œuvre pratique",
+          "duration": "5h",
+          "content": "Plan d'action, outils de suivi, mesure du ROI"
+        }
+      ],
+      "instructor": "Sarah Martin, Expert en Transformation Digitale",
+      "available": true,
+      "max_participants": 12
+    },
+    {
+      "id": 2,
+      "title": "Marketing Digital Avancé",
+      "description": "Maîtrisez les stratégies de marketing digital modernes : SEO, SEA, social media, automation et analytics pour maximiser votre ROI.",
+      "duration": "2 jours",
+      "price": "950€",
+      "level": "Intermédiaire",
+      "category": "Marketing",
+      "date": "2025-01-22",
+      "location": "Lyon",
+      "modalities": ["Présentiel", "À distance"],
+      "objectives": [
+        "Optimiser sa présence en ligne",
+        "Maîtriser les leviers du marketing digital",
+        "Mesurer et améliorer les performances"
+      ],
+      "program": [
+        {
+          "module": "Module 1 : Stratégie SEO/SEA",
+          "duration": "3h",
+          "content": "Audit SEO, optimisation technique, campagnes Google Ads"
+        },
+        {
+          "module": "Module 2 : Social Media & Content Marketing",
+          "duration": "3h",
+          "content": "Stratégies réseaux sociaux, création de contenu viral"
+        },
+        {
+          "module": "Module 3 : Analytics & Automation",
+          "duration": "2h",
+          "content": "Google Analytics, marketing automation, KPIs"
+        }
+      ],
+      "instructor": "Marc Dubois, Directeur Marketing Digital",
+      "available": true,
+      "max_participants": 15
+    },
+    {
+      "id": 3,
+      "title": "Cybersécurité pour les Entreprises",
+      "description": "Protégez votre entreprise contre les cybermenaces. Formation pratique sur la mise en place d'une stratégie de cybersécurité robuste.",
+      "duration": "1 jour",
+      "price": "650€",
+      "level": "Débutant",
+      "category": "Sécurité",
+      "date": "2025-01-29",
+      "location": "À distance",
+      "modalities": ["À distance"],
+      "objectives": [
+        "Identifier les principales cybermenaces",
+        "Mettre en place une politique de sécurité",
+        "Gérer les incidents de sécurité"
+      ],
+      "program": [
+        {
+          "module": "Module 1 : État des lieux des menaces",
+          "duration": "2h",
+          "content": "Typologie des attaques, vecteurs d'infection, cas réels"
+        },
+        {
+          "module": "Module 2 : Protection et prévention",
+          "duration": "3h",
+          "content": "Sécurisation des systèmes, formation des équipes"
+        },
+        {
+          "module": "Module 3 : Gestion de crise",
+          "duration": "1h",
+          "content": "Procédures d'urgence, communication de crise"
+        }
+      ],
+      "instructor": "Jean-Claude Durand, Expert Cybersécurité",
+      "available": true,
+      "max_participants": 20
+    }
+  ],
+  "services": [
+    {
+      "id": 1,
+      "title": "Audit Transformation Digitale",
+      "description": "Analyse complète de votre écosystème digital actuel et recommandations personnalisées pour optimiser vos processus et outils.",
+      "duration": "2 semaines",
+      "price": "3 500€",
+      "category": "Conseil",
+      "deliverables": [
+        "Rapport d'audit détaillé",
+        "Cartographie des processus actuels",
+        "Feuille de route transformation",
+        "Estimation ROI des recommandations"
+      ],
+      "features": [
+        "Analyse des outils existants",
+        "Benchmark secteur d'activité",
+        "Entretiens avec les équipes clés",
+        "Recommandations prioritaires"
+      ],
+      "timeline": "2 semaines après lancement",
+      "included": "Support 30 jours après livraison"
+    },
+    {
+      "id": 2,
+      "title": "Accompagnement Marketing Digital",
+      "description": "Stratégie marketing digital sur-mesure avec mise en œuvre et suivi des performances pour développer votre présence en ligne.",
+      "duration": "6 mois",
+      "price": "2 500€/mois",
+      "category": "Marketing",
+      "deliverables": [
+        "Stratégie marketing digital",
+        "Plan de contenu trimestriel",
+        "Rapport mensuel de performance",
+        "Optimisations continues"
+      ],
+      "features": [
+        "Audit de votre présence actuelle",
+        "Création de Persona",
+        "Stratégie SEO/SEA",
+        "Gestion des réseaux sociaux",
+        "Email marketing automation"
+      ],
+      "timeline": "Lancement sous 1 semaine",
+      "included": "Réunions hebdomadaires + support prioritaire"
+    },
+    {
+      "id": 3,
+      "title": "Sécurisation IT & Compliance",
+      "description": "Mise en conformité RGPD, sécurisation des systèmes d'information et formation des équipes aux bonnes pratiques.",
+      "duration": "1 mois",
+      "price": "4 200€",
+      "category": "Sécurité",
+      "deliverables": [
+        "Audit de sécurité complet",
+        "Plan de remédiation",
+        "Procédures de sécurité",
+        "Formation des équipes"
+      ],
+      "features": [
+        "Audit technique et organisationnel",
+        "Analyse des risques",
+        "Mise en conformité RGPD",
+        "Tests de pénétration",
+        "Plan de continuité d'activité"
+      ],
+      "timeline": "4 semaines après lancement",
+      "included": "Support 60 jours + formation équipe"
+    }
+  ],
+  "produits": [
+    {
+      "id": 1,
+      "title": "Kit Transformation Digitale PME",
+      "description": "Solution complète et clé en main pour accompagner la transformation digitale de votre PME. Includes templates, guides et outils.",
+      "price": "1 800€",
+      "original_price": "2 400€",
+      "category": "Solution Digitale",
+      "type": "package",
+      "formats": [
+        "PDF interactifs",
+        "Templates Excel/Word",
+        "Vidéos tutorielles",
+        "Checklists pratiques"
+      ],
+      "included": [
+        "Guide complet transformation digitale (120 pages)",
+        "50 templates prêts à l'emploi",
+        "10 vidéos de formation (5h)",
+        "Outil d'auto-diagnostic digital",
+        "Checklists de mise en œuvre",
+        "Support email 3 mois"
+      ],
+      "benefits": [
+        "Gain de temps : 200h de travail économisées",
+        "ROI moyen : 300% la première année",
+        "Approche progressive et structurée",
+        "Adaptable à tous secteurs"
+      ],
+      "target_audience": "Dirigeants et équipes PME",
+      "digital": true,
+      "download_immediate": true
+    },
+    {
+      "id": 2,
+      "title": "Formation Marketing Digital e-Learning",
+      "description": "Formation complète en ligne pour maîtriser le marketing digital. 20h de contenu vidéo + exercices pratiques + certification.",
+      "price": "690€",
+      "category": "e-Learning",
+      "type": "course",
+      "formats": [
+        "Vidéos HD",
+        "Supports PDF",
+        "Exercices interactifs",
+        "Certification"
+      ],
+      "included": [
+        "20 heures de vidéos de formation",
+        "Support de cours (150 pages)",
+        "50 exercices pratiques",
+        "Études de cas réelles",
+        "Certification officielle",
+        "Accès à vie + mises à jour"
+      ],
+      "benefits": [
+        "Formation à votre rythme",
+        "Certification reconnue",
+        "Mise à jour continue",
+        "Support communauté"
+      ],
+      "target_audience": "Marketeurs, entrepreneurs, étudiants",
+      "digital": true,
+      "download_immediate": true
+    },
+    {
+      "id": 3,
+      "title": "Logiciel CRM Évolution Manager",
+      "description": "CRM customisé pour les PME françaises. Gestion clients, ventes, marketing automation et reporting avancé.",
+      "price": "99€/mois",
+      "setup_price": "399€",
+      "category": "Solution Logicielle",
+      "type": "software",
+      "trial_period": "30 jours gratuits",
+      "features": [
+        "Gestion des contacts et comptes",
+        "Suivi des opportunités commerciales",
+        "Marketing automation intégré",
+        "Reporting et analytics",
+        "API pour intégrations",
+        "Support technique premium"
+      ],
+      "benefits": [
+        "Déploiement rapide (1 semaine)",
+        "Formation inclusée",
+        "Sauvegarde automatique",
+        "Évolutivité selon vos besoins"
+      ],
+      "target_audience": "Équipes commerciales PME",
+      "digital": true,
+      "subscription": true,
+      "trial_available": true
+    }
+  ],
+  "actualites": [
+    {
+      "id": 1,
+      "title": "L'IA Générative : Révolutionner la Relation Client en 2025",
+      "description": "Découvrez comment l'intelligence artificielle générative transforme l'expérience client et les stratégies marketing des entreprises modernes.",
+      "category": "Innovation",
+      "type": "article",
+      "date": "2025-01-03",
+      "readTime": "8 min",
+      "author": "Dr. Sophie Laurent",
+      "image": "/images/ai-customer-service.jpg",
+      "tags": ["IA", "Customer Experience", "Innovation"]
+    },
+    {
+      "id": 2,
+      "title": "Nouvelle Réglementation RGPD : Ce que Doivent Savoir les PME",
+      "description": "Analyse des dernières évolutions réglementaires et guide pratique pour maintenir la conformité de votre entreprise.",
+      "category": "Conformité",
+      "type": "article",
+      "date": "2025-01-01",
+      "readTime": "6 min",
+      "author": "Maître Jean Dupont",
+      "image": "/images/gdpr-compliance.jpg",
+      "tags": ["RGPD", "Compliance", "Juridique"]
+    },
+    {
+      "id": 3,
+      "title": "Cybersécurité : Les 5 Menaces Majeures de 2025",
+      "description": "Panorama des principales cybermenaces émergentes et stratégies de protection pour les entreprises françaises.",
+      "category": "Sécurité",
+      "type": "article",
+      "date": "2024-12-28",
+      "readTime": "10 min",
+      "author": "Expert Security Team",
+      "image": "/images/cyber-threats.jpg",
+      "tags": ["Cybersécurité", "Menaces", "Protection"]
+    }
+  ],
+  "ressources": [
+    {
+      "id": 1,
+      "title": "Guide Complet : Audit de Transformation Digitale",
+      "description": "Document de référence pour réaliser l'audit de votre écosystème digital. Méthodologie, outils et recommandations pratiques.",
+      "category": "Guide",
+      "type": "download",
+      "date": "2025-01-05",
+      "readTime": "25 min",
+      "author": "Équipe Évolutionis",
+      "download_url": "/downloads/guide-audit-transformation.pdf",
+      "file_size": "2.5 MB",
+      "format": "PDF",
+      "tags": ["Audit", "Transformation Digitale", "Méthodologie"]
+    },
+    {
+      "id": 2,
+      "title": "Webinaire : Stratégies Marketing Digital 2025",
+      "description": "Revoir le webinaire complet sur les tendances marketing digital et les stratégies gagnantes pour 2025.",
+      "category": "Webinaire",
+      "type": "video",
+      "date": "2025-01-02",
+      "readTime": "60 min",
+      "author": "Marc Dubois",
+      "video_url": "/videos/marketing-digital-2025.mp4",
+      "duration": "60 min",
+      "tags": ["Marketing Digital", "Stratégie", "Tendances"]
+    },
+    {
+      "id": 3,
+      "title": "Checklist : Sécurisation des Données Clients",
+      "description": "Liste de vérification pour s'assurer de la sécurité optimale des données client dans votre entreprise.",
+      "category": "Outil",
+      "type": "download",
+      "date": "2024-12-30",
+      "readTime": "5 min",
+      "author": "Équipe Sécurité",
+      "download_url": "/downloads/checklist-securite-donnees.xlsx",
+      "file_size": "150 KB",
+      "format": "Excel",
+      "tags": ["Sécurité", "Données", "Checklist"]
+    }
+  ],
+  "temoignages": [
+    {
+      "id": 1,
+      "nom": "Jean-Pierre Morel",
+      "poste": "Directeur Général",
+      "entreprise": "TechCorp SA",
+      "photo": "/images/testimonial-1.jpg",
+      "note": 5,
+      "commentaire": "Les formations d'Evolystis ont transformé notre approche du management. L'équipe est maintenant plus performante et motivée.",
+      "formation": "Leadership & Management"
+    },
+    {
+      "id": 2,
+      "nom": "Marie-Claire Dubois",
+      "poste": "Responsable IT",
+      "entreprise": "InnovateLab",
+      "photo": "/images/testimonial-2.jpg",
+      "note": 5,
+      "commentaire": "Le conseil en transformation digitale d'Evolystis nous a permis de moderniser notre infrastructure sans interruption de service.",
+      "formation": "Transformation Digitale"
+    },
+    {
+      "id": 3,
+      "nom": "Antoine Rousseau",
+      "poste": "Directeur de Production",
+      "entreprise": "Manufacture Plus",
+      "photo": "/images/testimonial-3.jpg",
+      "note": 4,
+      "commentaire": "L'optimisation de nos processus industriels nous a fait économiser 30% sur nos coûts de production.",
+      "formation": "Optimisation des Processus"
+    }
+  ],
+  "configuration": {
+    "nomEntreprise": "Evolystis",
+    "slogan": "Favoriser l'Innovation par l'Éducation Professionnelle",
+    "telephone": "+33 1 45 67 89 00",
+    "email": "contact@evolystis.fr",
+    "adresse": "123 Avenue des Champs-Élysées, 75008 Paris",
+    "horaires": "Lundi - Vendredi : 9h00 - 18h00",
+    "reseauxSociaux": {
+      "linkedin": "https://linkedin.com/company/evolystis",
+      "facebook": "https://facebook.com/evolystis",
+      "twitter": "https://twitter.com/evolystis"
+    }
+  }
+}
