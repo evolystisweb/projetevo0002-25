@@ -14,7 +14,7 @@ import {
   TrendingUp,
   Clock
 } from 'lucide-react';
-import contentData from '../data/content.json';
+import contentData from '../../data/content.json';
 
 const ServicesEtProduitsSection = ({ language = 'fr' }) => {
   const [activeTab, setActiveTab] = useState('services');

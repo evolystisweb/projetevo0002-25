@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Calendar, Clock, Euro, Star, Filter, Search } from 'lucide-react';
-import contentData from '../data/content.json';
+import contentData from '../../data/content.json';
 
 const FormationsSection = ({ language = 'fr' }) => {
   const [searchTerm, setSearchTerm] = useState('');

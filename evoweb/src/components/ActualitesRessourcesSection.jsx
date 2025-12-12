@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Calendar, Clock, User, ArrowRight, Search, Filter, BookOpen, FileText, Video, Download } from 'lucide-react';
-import contentData from '../data/content.json';
+import contentData from '../../data/content.json';
 
 const ActualitesRessourcesSection = ({ language = 'fr' }) => {
   const [activeTab, setActiveTab] = useState('actualites');
