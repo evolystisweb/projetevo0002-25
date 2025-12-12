@@ -2,7 +2,7 @@
   "name": "evoweb-project",
   "version": "1.0.0",
   "scripts": {
-    "dev": "cd evoweb && npm run dev",
-    "build": "cd evoweb && npm run build"
+    "dev": "npm --prefix evoweb run dev",
+    "build": "npm --prefix evoweb run build"
   }
 }
